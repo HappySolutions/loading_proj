@@ -15,4 +15,11 @@
     <string name="glid">Glid - Image Loading Liprary By Bumb Tech</string>
     <string name="udacity">LoadApp - Current repository By Udacity</string>
     <string name="retrofit">Retrofit - Type-safe HTP client for Android and Java by Square, Inc</string>
+    <string name="custom_action">Custom Action</string>
+    <string name="file_name">File Name:</string>
+    <string name="status">Status:</string>
+    <string name="image_represent_android_sympol">image_represent_android_sympol</string>
+    <string name="success">Success</string>
+
+
 </resources>
