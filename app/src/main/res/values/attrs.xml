@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <declare-styleable name="LoadingButton">
-        <attr name="buttonColor1" format="color" />
-        <attr name="buttonColor2" format="color" />
-        <attr name="buttonColor3" format="color" />
+        <attr name="buttonColor1" format="integer" />
+        <attr name="buttonColor2" format="integer" />
+        <attr name="buttonColor3" format="integer" />
+        <attr name="buttonTextColor" format="color" />
+        <attr name="buttonBackgroundColor" format="color" />
     </declare-styleable>
 </resources>

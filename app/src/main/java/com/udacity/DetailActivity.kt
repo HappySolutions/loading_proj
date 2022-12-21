@@ -16,7 +16,14 @@ class DetailActivity : AppCompatActivity() {
         setContentView(R.layout.activity_detail)
         setSupportActionBar(toolbar)
         applyFileName_fileStatus()
+
+        fab.setOnClickListener{
+            onBackPressed()
+        }
     }
+
+    
+
     private fun applyFileName_fileStatus() {
         val fileName = intent.getStringExtra(FILE_NAME)
         val statusText = intent.getStringExtra(STATUS)

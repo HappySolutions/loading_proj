@@ -9,7 +9,7 @@
     <string name="notification_button">See changes</string>
 
     <string name="button_name">Click me</string>
-    <string name="button_loading">We are loading </string>
+    <string name="button_loading">Downloading..</string>
     <string name="download">Download</string>
     <string name="title_activity_detail">DetailActivity</string>
     <string name="glid">Glid - Image Loading Liprary By Bumb Tech</string>

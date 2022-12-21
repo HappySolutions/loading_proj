@@ -28,6 +28,7 @@ import kotlinx.android.synthetic.main.content_main.*
 class MainActivity : AppCompatActivity() {
 
     private var downloadID: Long = 0
+    private lateinit var context: Context
 
     private var checkedIdV: Int? = null
 //    private var status: NotificationsHelper.DownloadStatus? = null
@@ -37,6 +38,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setSupportActionBar(toolbar)
+        context = custom_button.context
+
         //Register the notification channel
         createNotificationChannel()
 
@@ -106,6 +109,9 @@ class MainActivity : AppCompatActivity() {
             }
         }
     }
+    private fun setButtonState(buttonState: ButtonState) {
+        custom_button.setNewButtonState(buttonState)
+    }
 
     private val receiver = object : BroadcastReceiver() {
         override fun onReceive(context: Context?, intent: Intent?) {
@@ -114,8 +120,7 @@ class MainActivity : AppCompatActivity() {
             if (isDownComp(intent)) {
                 status = queryDownloadStatus(intent)
             }
-            //setButtonState(ButtonState.Completed)
-            //sendNotification(getFileName(), status.status)
+            setButtonState(ButtonState.Completed)
         }
     }
 
@@ -157,6 +162,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun download() {
+        setButtonState(ButtonState.Loading)
+
         val request =
             DownloadManager.Request(Uri.parse(URL))
                 .setTitle(getString(R.string.app_name))
@@ -173,6 +180,8 @@ class MainActivity : AppCompatActivity() {
         downloadID =
             downloadManager.enqueue(request)// enqueue puts the download request in the queue.
     }
+
+    //fun to return file name
     private fun getFileName(): String {
         return when (radioGroup.checkedRadioButtonId) {
             R.id.radio_glide -> getString(R.string.glid)
@@ -181,6 +190,7 @@ class MainActivity : AppCompatActivity() {
             else -> ""
         }
     }
+
     companion object {
         private var URL =
             "https://github.com/udacity/nd940-c3-advanced-android-programming-project-starter/archive/master.zip"

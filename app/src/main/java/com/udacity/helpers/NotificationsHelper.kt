@@ -11,7 +11,6 @@ import androidx.core.app.NotificationManagerCompat
 import com.udacity.DetailActivity
 import com.udacity.MainActivity
 import com.udacity.R
-import com.udacity.services.GlobalBroadcastReceiver
 
 object NotificationsHelper {
     const val FILE_NAME = "fileName"

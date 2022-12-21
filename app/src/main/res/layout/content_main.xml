@@ -58,25 +58,11 @@
             android:text="@string/retrofit" />
     </RadioGroup>
 
-<!--    <com.udacity.LoadingButton-->
-<!--        android:id="@+id/custom_button"-->
-<!--        android:layout_width="0dp"-->
-<!--        android:layout_height="60dp"-->
-<!--        android:layout_margin="20dp"-->
-<!--        app:buttonColor1="#FFEB3B"-->
-<!--        app:buttonColor2="#CDDC39"-->
-<!--        app:buttonColor3="#009688"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent"-->
-<!--        app:layout_constraintVertical_bias="0.673" />-->
-    <Button
+    <com.udacity.LoadingButton
         android:id="@+id/custom_button"
         android:layout_width="0dp"
-        android:layout_height="60dp"
+        android:layout_height="80dp"
         android:layout_margin="20dp"
-        android:text="Download"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
