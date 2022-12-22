@@ -20,6 +20,7 @@
     <string name="status">Status:</string>
     <string name="image_represent_android_sympol">image_represent_android_sympol</string>
     <string name="success">Success</string>
+    <string name="image_represent_download_sympol">image_represent_download_sympol</string>
 
 
 </resources>
